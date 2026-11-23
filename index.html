@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>A little surprise for you ♡</title>
+  <meta name="description" content="A tiny birthday world, made with love.">
+  <meta name="theme-color" content="#ffd6e0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💗</text></svg>">
+
+  <!-- Fonts: elegant serif (headings), script (personal notes), clean sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nunito:wght@400;600;700;800&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Lets the CSS know JavaScript is available (used for scroll reveal) -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body class="is-locked">
+
+  <!-- ==========================================================
+       SVG SPRITE — every little icon and illustration lives here
+       and is reused with <use href="#id">
+       ========================================================== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6L12 2z"/></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2c.6 5.4 4.6 9.4 10 10-5.4.6-9.4 4.6-10 10-.6-5.4-4.6-9.4-10-10 5.4-.6 9.4-4.6 10-10z"/></symbol>
+      <symbol id="i-flower" viewBox="0 0 48 48">
+        <circle cx="24" cy="11" r="8"/><circle cx="36.5" cy="20" r="8"/><circle cx="31.7" cy="34.7" r="8"/><circle cx="16.3" cy="34.7" r="8"/><circle cx="11.5" cy="20" r="8"/>
+        <circle cx="24" cy="24" r="6" fill="#f2d388"/>
+      </symbol>
+      <symbol id="i-bow" viewBox="0 0 64 40">
+        <path d="M32 21C26 7 12 1 5 7c-6 5-1 20 12 20 6 0 11-2 15-6z"/>
+        <path d="M32 21c6-14 20-20 27-14 6 5 1 20-12 20-6 0-11-2-15-6z"/>
+        <path d="M30 24L20 38l8-3 4-8zM34 24l10 14-8-3-4-8z"/>
+        <circle cx="32" cy="21" r="6"/>
+        <path d="M12 12c4-3 9-2 14 4M52 12c-4-3-9-2-14 4" stroke="#fff" stroke-opacity=".55" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+      <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M6.5 19a4.5 4.5 0 0 1-.4-8.98A6 6 0 0 1 17.6 9.4 4.8 4.8 0 0 1 17.5 19h-11z"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5"/>
+        <rect x="11" y="1" width="2" height="4" rx="1"/>
+        <rect x="11" y="1" width="2" height="4" rx="1" transform="rotate(45 12 12)"/>
+        <rect x="11" y="1" width="2" height="4" rx="1" transform="rotate(90 12 12)"/>
+        <rect x="11" y="1" width="2" height="4" rx="1" transform="rotate(135 12 12)"/>
+        <rect x="11" y="1" width="2" height="4" rx="1" transform="rotate(180 12 12)"/>
+        <rect x="11" y="1" width="2" height="4" rx="1" transform="rotate(225 12 12)"/>
+        <rect x="11" y="1" width="2" height="4" rx="1" transform="rotate(270 12 12)"/>
+        <rect x="11" y="1" width="2" height="4" rx="1" transform="rotate(315 12 12)"/>
+      </symbol>
+      <symbol id="i-butterfly" viewBox="0 0 24 24">
+        <ellipse cx="7" cy="8.5" rx="5.2" ry="5.8" transform="rotate(-25 7 8.5)"/>
+        <ellipse cx="17" cy="8.5" rx="5.2" ry="5.8" transform="rotate(25 17 8.5)"/>
+        <ellipse cx="8.5" cy="16.5" rx="3.6" ry="4.2" transform="rotate(20 8.5 16.5)"/>
+        <ellipse cx="15.5" cy="16.5" rx="3.6" ry="4.2" transform="rotate(-20 15.5 16.5)"/>
+        <rect x="11.2" y="6" width="1.6" height="14" rx=".8" fill="#7b5a52"/>
+      </symbol>
+      <symbol id="i-note" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></symbol>
+      <symbol id="i-prev" viewBox="0 0 24 24"><path d="M6 6h2v12H6zM9.5 12l8.5 6V6z"/></symbol>
+      <symbol id="i-next" viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></symbol>
+      <symbol id="i-volume" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></symbol>
+      <symbol id="i-mute" viewBox="0 0 24 24"><path d="M16.5 12A4.5 4.5 0 0 0 14 7.97v2.21l2.45 2.45c.03-.2.05-.41.05-.63zM19 12c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.8 8.8 0 0 0 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06a8.99 8.99 0 0 0 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+      <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></symbol>
+      <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></symbol>
+
+      <!-- Kawaii gift box with two heart balloons -->
+      <symbol id="ill-gift" viewBox="0 0 200 200">
+        <path d="M54 72C50 100 62 122 84 142" stroke="#c76f88" stroke-width="1.6" fill="none"/>
+        <path d="M144 76C148 104 134 124 114 142" stroke="#a98bd0" stroke-width="1.6" fill="none"/>
+        <use href="#i-heart" x="20" y="10" width="68" height="68" fill="#f48fb1"/>
+        <use href="#i-heart" x="112" y="22" width="60" height="60" fill="#c3a8e6"/>
+        <ellipse cx="42" cy="32" rx="5" ry="8" fill="#fff" opacity=".55" transform="rotate(25 42 32)"/>
+        <ellipse cx="128" cy="40" rx="4" ry="7" fill="#fff" opacity=".55" transform="rotate(25 128 40)"/>
+        <rect x="62" y="134" width="76" height="56" rx="8" fill="#ffd9e2" stroke="#c76f88" stroke-width="2"/>
+        <rect x="56" y="120" width="88" height="20" rx="7" fill="#f8bfcc" stroke="#c76f88" stroke-width="2"/>
+        <rect x="94" y="120" width="12" height="70" fill="#fffbf5" opacity=".9"/>
+        <use href="#i-bow" x="74" y="92" width="52" height="32" fill="#c76f88"/>
+        <circle cx="79" cy="158" r="3.2" fill="#4a2f2a"/>
+        <circle cx="121" cy="158" r="3.2" fill="#4a2f2a"/>
+        <path d="M95 163q5 6 10 0" stroke="#4a2f2a" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="72" cy="167" rx="5" ry="3" fill="#f48fb1" opacity=".7"/>
+        <ellipse cx="128" cy="167" rx="5" ry="3" fill="#f48fb1" opacity=".7"/>
+        <use href="#i-sparkle" x="150" y="108" width="16" height="16" fill="#f2d388"/>
+        <use href="#i-sparkle" x="30" y="112" width="12" height="12" fill="#f2d388"/>
+        <use href="#i-star" x="160" y="150" width="12" height="12" fill="#e3d4f5"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Full-screen canvas used for confetti bursts -->
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <!-- ==========================================================
+       SECTION 1 — WELCOME SCREEN (envelope)
+       ========================================================== -->
+  <div id="intro" class="intro" role="dialog" aria-modal="true" aria-labelledby="introTitle">
+    <div id="introFloaters" class="floaters-intro" aria-hidden="true"></div>
+
+    <div class="intro-inner">
+      <svg class="ill-intro" viewBox="0 0 200 200" aria-hidden="true"><use href="#ill-gift"/></svg>
+      <h1 id="introTitle" class="intro-title">A little surprise for you yahahahah</h1>
+      <p class="intro-for">made with love, for <span data-bind="herName">my baby!</span></p>
+
+      <button id="envelope" class="envelope" type="button" aria-label="Open the envelope" aria-expanded="false">
+        <span class="env-body"></span>
+        <span class="env-letter">
+          <span class="env-letter-small">happy birthday</span>
+          <span class="env-letter-name" data-bind="herName">baby</span>
+        </span>
+        <span class="env-left"></span>
+        <span class="env-right"></span>
+        <span class="env-bottom"></span>
+        <span class="env-ribbon"></span>
+        <span class="env-flap"></span>
+        <svg class="icon env-bow" viewBox="0 0 64 40" aria-hidden="true"><use href="#i-bow"/></svg>
+      </button>
+
+      <p id="introHint" class="intro-hint">Tap the envelope</p>
+      <div id="introWelcome" class="intro-welcome" hidden>
+        <p id="welcomeText"></p>
+      </div>
+
+      <button id="openBtn" class="btn btn-primary" type="button">Open your little surprise ♡</button>
+    </div>
+  </div>
+
+  <!-- ==========================================================
+       MAIN SITE (revealed after the envelope is opened)
+       ========================================================== -->
+  <div id="site">
+
+    <!-- Floating navigation -->
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navList" aria-label="Open menu">
+        <svg class="icon i-menu" aria-hidden="true"><use href="#i-heart"/></svg>
+        <svg class="icon i-x" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+      <ul class="nav-list" id="navList">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#birthday">Birthday</a></li>
+        <li><a href="#letter">Letter</a></li>
+        <li><a href="#reasons">Reasons</a></li>
+        <li><a href="#openwhen">Open When</a></li>
+        <li><a href="#playlist">Playlist</a></li>
+        <li><a href="#surprise">Surprise</a></li>
+      </ul>
+    </nav>
+
+    <!-- Soft floating hearts, stars and sparkles (created by script.js) -->
+    <div class="floaters" id="floaters" aria-hidden="true"></div>
+
+    <main>
+
+      <!-- ======================================================
+           HOME
+           ====================================================== -->
+      <section id="home" class="section sec-home" aria-labelledby="homeTitle">
+        <button class="egg egg-star" type="button" data-egg="star" aria-label="A hidden star. Tap to see what it says.">
+          <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>
+        </button>
+        <svg class="icon deco deco-flower-a" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-flower"/></svg>
+        <svg class="icon deco deco-flower-b" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-flower"/></svg>
+
+        <div class="home-inner reveal">
+          <svg class="icon home-bow" viewBox="0 0 64 40" aria-hidden="true"><use href="#i-bow"/></svg>
+          <p class="home-kicker">A little gift</p>
+          <h2 id="homeTitle" class="home-title">just for u</h2>
+          <p class="home-for">happy birthday, <span data-bind="herName">Kyky</span></p>
+          <p class="home-message" data-bind="welcomeMessage"></p>
+
+          <div class="compliment">
+            <button id="complimentBtn" class="btn btn-soft" type="button">CLick me! ♡</button>
+            <p id="complimentText" class="bubble" aria-live="polite" hidden></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================
+           SECTION 2 — HAPPY BIRTHDAY
+           ====================================================== -->
+      <section id="birthday" class="section sec-birthday" aria-labelledby="bdayTitle">
+        <div class="bunting" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="confetti-rain" id="confettiRain" aria-hidden="true"></div>
+
+        <div class="bday-inner reveal">
+          <svg class="ill-gift" viewBox="0 0 200 200" role="img" aria-label="A smiling gift box with two heart balloons"><use href="#ill-gift"/></svg>
+          <h2 id="bdayTitle" class="bday-title">Happy Birthday,
+            <span class="bday-name" data-bind="herName">baby ko</span>
+          </h2>
+          <p class="bday-greeting" data-bind="birthdayGreeting"></p>
+        </div>
+      </section>
+
+      <!-- ======================================================
+           SECTION 3 — A LETTER FOR YOU
+           ====================================================== -->
+      <section id="letter" class="section sec-letter" aria-labelledby="letterTitle">
+        <div class="section-head reveal">
+          <h2 id="letterTitle">A letter for you</h2>
+          <p class="section-sub">Read it slowly. Every line is yours.</p>
+        </div>
+
+        <article id="paper" class="paper reveal">
+          <button class="egg egg-flower" type="button" data-egg="flower" aria-label="A hidden flower. Tap to see what it says.">
+            <svg class="icon" aria-hidden="true"><use href="#i-flower"/></svg>
+          </button>
+          <svg class="icon paper-flower paper-flower-a" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-flower"/></svg>
+          <svg class="icon paper-flower paper-flower-b" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-flower"/></svg>
+
+          <div class="paper-top" aria-hidden="true">
+            <div class="postmark"><span>with love</span></div>
+            <div class="stamp"><svg class="icon"><use href="#i-heart"/></svg></div>
+          </div>
+
+          <p class="letter-greeting">Dear <span data-bind="herName">Kyla</span>,</p>
+          <div id="letterBody" class="letter-body"></div>
+          <p id="letterSign" class="letter-sign">
+            <span id="letterSignOff" class="sign-off"></span>
+            <span class="sign-name" data-bind="myName">me</span>
+          </p>
+        </article>
+
+        <div class="letter-actions">
+          <button id="replayLetter" class="btn btn-primary" type="button">Replay the letter ♡</button>
+          <button id="skipLetter" class="btn btn-soft" type="button">Show the whole letter</button>
+        </div>
+      </section>
+
+      <!-- ======================================================
+           SECTION 5 — 30 THINGS I ADORE ABOUT YOU
+           ====================================================== -->
+      <section id="reasons" class="section sec-reasons" aria-labelledby="reasonsTitle">
+        <button class="egg egg-heart" type="button" data-egg="heart" aria-label="A hidden heart. Tap to see what it says.">
+          <svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>
+        </button>
+        <div class="section-head reveal">
+          <h2 id="reasonsTitle">30 things I adore about you</h2>
+          <p class="section-sub">Tap any heart, or let me pick one for you.</p>
+        </div>
+
+        <div class="reason-panel reveal">
+          <p id="reasonLabel" class="reason-label">Ready when you are</p>
+          <p id="reasonText" class="reason-text" aria-live="polite">Pick a heart below, or press the button.</p>
+          <button id="anotherReason" class="btn btn-primary" type="button">Give me another reason ♡</button>
+          <p id="reasonProgress" class="reason-progress"></p>
+        </div>
+
+        <div id="reasonGrid" class="reason-grid reveal"></div>
+      </section>
+
+      <!-- ======================================================
+           SECTION 6 — OPEN WHEN...
+           ====================================================== -->
+      <section id="openwhen" class="section sec-openwhen" aria-labelledby="openwhenTitle">
+        <div class="section-head reveal">
+          <h2 id="openwhenTitle">Open when...</h2>
+          <p class="section-sub">Eight little letters for the moments you might need them.</p>
+        </div>
+        <div id="openGrid" class="open-grid reveal"></div>
+      </section>
+
+      <!-- ======================================================
+           SECTION 7 — OUR LITTLE PLAYLIST
+           ====================================================== -->
+      <section id="playlist" class="section sec-playlist" aria-labelledby="playlistTitle">
+        <button class="egg egg-bow" type="button" data-egg="bow" aria-label="A hidden bow. Tap to see what it says.">
+          <svg class="icon" viewBox="0 0 64 40" aria-hidden="true"><use href="#i-bow"/></svg>
+        </button>
+        <div class="section-head reveal">
+          <h2 id="playlistTitle">Our little playlist</h2>
+          <p class="section-sub">Songs that sound like us.</p>
+        </div>
+
+        <div id="player" class="player reveal">
+          <div class="player-top">
+            <div class="cover-wrap" aria-hidden="true">
+              <div class="record"><span class="record-label"><svg class="icon"><use href="#i-heart"/></svg></span></div>
+              <div class="sleeve">
+                <svg viewBox="0 0 200 200" class="sleeve-art">
+                  <rect width="200" height="200" fill="#f8bfcc"/>
+                  <circle cx="100" cy="92" r="62" fill="#fff2e2"/>
+                  <use href="#i-heart" x="62" y="54" width="76" height="76" fill="#c76f88"/>
+                  <use href="#i-flower" x="14" y="14" width="30" height="30" fill="#fffbf5"/>
+                  <use href="#i-flower" x="156" y="150" width="30" height="30" fill="#fffbf5"/>
+                  <use href="#i-sparkle" x="154" y="22" width="18" height="18" fill="#f2d388"/>
+                  <text x="100" y="178" text-anchor="middle" font-family="Caveat, cursive" font-size="30" font-weight="700" fill="#4a2f2a">our songs</text>
+                </svg>
+                <img id="trackCover" class="sleeve-img" alt="" hidden>
+              </div>
+            </div>
+
+            <div class="player-info">
+              <p class="now-label">now playing</p>
+              <h3 id="trackTitle" class="track-title">Song title</h3>
+              <p id="trackArtist" class="track-artist">Artist</p>
+              <div class="viz" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="progress-row">
+            <span id="timeCur" class="time">0:00</span>
+            <input id="seek" class="range" type="range" min="0" max="100" step="0.1" value="0" aria-label="Song progress">
+            <span id="timeDur" class="time">0:00</span>
+          </div>
+
+          <div class="controls">
+            <button id="prevBtn" class="round-btn" type="button" aria-label="Previous song"><svg class="icon"><use href="#i-prev"/></svg></button>
+            <button id="playBtn" class="round-btn round-btn-lg" type="button" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+            <button id="nextBtn" class="round-btn" type="button" aria-label="Next song"><svg class="icon"><use href="#i-next"/></svg></button>
+            <div class="volume">
+              <button id="muteBtn" class="icon-btn" type="button" aria-label="Mute" aria-pressed="false"><svg class="icon"><use href="#i-volume"/></svg></button>
+              <input id="volume" class="range range-vol" type="range" min="0" max="1" step="0.01" value="0.7" aria-label="Volume">
+            </div>
+          </div>
+
+          <div class="track-note">
+            <p class="note-label">why this song</p>
+            <p id="trackNote"></p>
+          </div>
+        </div>
+
+        <ol id="trackList" class="tracklist reveal"></ol>
+      </section>
+
+      <!-- ======================================================
+           SECTION 8 — ONE LAST SURPRISE
+           ====================================================== -->
+      <section id="surprise" class="section sec-surprise" aria-labelledby="surpriseTitle">
+        <button class="egg egg-sparkle" type="button" data-egg="sparkle" aria-label="A hidden sparkle. Tap to see what it says.">
+          <svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg>
+        </button>
+        <div class="section-head reveal">
+          <h2 id="surpriseTitle">One last surprise</h2>
+          <p id="wishPrompt" class="section-sub wish-prompt">Close your eyes, make a wish, and tap the button. ♡</p>
+        </div>
+
+        <div class="cake-stage reveal">
+          <svg class="icon cake-spark cs-1" aria-hidden="true"><use href="#i-sparkle"/></svg>
+          <svg class="icon cake-spark cs-2" aria-hidden="true"><use href="#i-star"/></svg>
+          <svg class="icon cake-spark cs-3" aria-hidden="true"><use href="#i-sparkle"/></svg>
+          <svg class="icon cake-spark cs-4" aria-hidden="true"><use href="#i-heart"/></svg>
+
+          <svg id="cake" class="cake" viewBox="0 0 300 300" role="img" aria-label="A pastel birthday cake with three candles">
+            <defs>
+              <linearGradient id="flameGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffd35c"/><stop offset="1" stop-color="#ff9a5a"/>
+              </linearGradient>
+            </defs>
+            <!-- plate -->
+            <ellipse cx="150" cy="282" rx="132" ry="13" fill="#e9a3b5" opacity=".55"/>
+            <ellipse cx="150" cy="274" rx="128" ry="13" fill="#fffaf3"/>
+            <!-- bottom tier -->
+            <rect x="42" y="192" width="216" height="82" rx="20" fill="#ffd1dc"/>
+            <rect x="42" y="190" width="216" height="20" rx="10" fill="#fffaf3"/>
+            <g fill="#fffaf3">
+              <circle cx="57" cy="209" r="15"/><circle cx="88" cy="209" r="15"/><circle cx="119" cy="209" r="15"/>
+              <circle cx="150" cy="209" r="15"/><circle cx="181" cy="209" r="15"/><circle cx="212" cy="209" r="15"/><circle cx="243" cy="209" r="15"/>
+            </g>
+            <use href="#i-heart" x="68" y="236" width="18" height="18" fill="#fffaf3"/>
+            <use href="#i-flower" x="104" y="232" width="22" height="22" fill="#fffaf3"/>
+            <use href="#i-heart" x="141" y="240" width="18" height="18" fill="#fffaf3"/>
+            <use href="#i-flower" x="174" y="232" width="22" height="22" fill="#fffaf3"/>
+            <use href="#i-heart" x="214" y="236" width="18" height="18" fill="#fffaf3"/>
+            <!-- top tier -->
+            <rect x="78" y="132" width="144" height="64" rx="16" fill="#f7b6c8"/>
+            <rect x="78" y="130" width="144" height="18" rx="9" fill="#fffaf3"/>
+            <g fill="#fffaf3">
+              <circle cx="89" cy="146" r="11"/><circle cx="113.4" cy="146" r="11"/><circle cx="137.8" cy="146" r="11"/>
+              <circle cx="162.2" cy="146" r="11"/><circle cx="186.6" cy="146" r="11"/><circle cx="211" cy="146" r="11"/>
+            </g>
+            <use href="#i-heart" x="96" y="166" width="16" height="16" fill="#fffaf3"/>
+            <use href="#i-heart" x="142" y="172" width="16" height="16" fill="#fffaf3"/>
+            <use href="#i-heart" x="188" y="166" width="16" height="16" fill="#fffaf3"/>
+            <!-- candles -->
+            <rect x="111" y="98" width="8" height="34" rx="3" fill="#fffbf5"/>
+            <rect x="146" y="98" width="8" height="34" rx="3" fill="#d9c4f2"/>
+            <rect x="181" y="98" width="8" height="34" rx="3" fill="#ffe3ea"/>
+            <path d="M111 108l8-4M111 118l8-4M111 128l8-4" stroke="#f4a3b8" stroke-width="2.4"/>
+            <path d="M146 108l8-4M146 118l8-4M146 128l8-4" stroke="#fff" stroke-width="2.4" opacity=".8"/>
+            <path d="M181 108l8-4M181 118l8-4M181 128l8-4" stroke="#f4a3b8" stroke-width="2.4"/>
+            <rect x="114.2" y="92" width="1.6" height="7" fill="#7b5a52"/>
+            <rect x="149.2" y="92" width="1.6" height="7" fill="#7b5a52"/>
+            <rect x="184.2" y="92" width="1.6" height="7" fill="#7b5a52"/>
+            <!-- smoke puffs (appear when candles go out) -->
+            <ellipse class="smoke" cx="115" cy="84" rx="4" ry="7" fill="#fff" opacity="0" style="--d:0s"/>
+            <ellipse class="smoke" cx="150" cy="84" rx="4" ry="7" fill="#fff" opacity="0" style="--d:.25s"/>
+            <ellipse class="smoke" cx="185" cy="84" rx="4" ry="7" fill="#fff" opacity="0" style="--d:.5s"/>
+            <!-- flames -->
+            <g transform="translate(115 92)"><g class="flame" style="--d:0s;--fd:-.2s">
+              <circle r="14" cy="-7" fill="#ffe28a" opacity=".35"/>
+              <path d="M0-17C7-8 8-1 0 5-8-1-7-8 0-17z" fill="url(#flameGrad)"/>
+              <ellipse cx="0" cy="-2" rx="2.6" ry="4.5" fill="#fff6d6"/>
+            </g></g>
+            <g transform="translate(150 92)"><g class="flame" style="--d:.25s;--fd:-.6s">
+              <circle r="14" cy="-7" fill="#ffe28a" opacity=".35"/>
+              <path d="M0-17C7-8 8-1 0 5-8-1-7-8 0-17z" fill="url(#flameGrad)"/>
+              <ellipse cx="0" cy="-2" rx="2.6" ry="4.5" fill="#fff6d6"/>
+            </g></g>
+            <g transform="translate(185 92)"><g class="flame" style="--d:.5s;--fd:-.9s">
+              <circle r="14" cy="-7" fill="#ffe28a" opacity=".35"/>
+              <path d="M0-17C7-8 8-1 0 5-8-1-7-8 0-17z" fill="url(#flameGrad)"/>
+              <ellipse cx="0" cy="-2" rx="2.6" ry="4.5" fill="#fff6d6"/>
+            </g></g>
+          </svg>
+        </div>
+
+        <div class="wish-action reveal">
+          <button id="wishBtn" class="btn btn-primary btn-big" type="button">Make a wish!</button>
+        </div>
+
+        <article id="finalMessage" class="final-card" hidden>
+          <svg class="icon final-bow" viewBox="0 0 64 40" aria-hidden="true"><use href="#i-bow"/></svg>
+          <h3 id="finalTitle" class="final-title"></h3>
+          <div id="finalBody" class="final-body"></div>
+          <p id="finalSign" class="final-sign"></p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-line">made with love, just for <span data-bind="herName">you</span></p>
+      <p id="secretCount" class="footer-secrets">Secrets found: 0 of 5</p>
+    </footer>
+
+    <!-- Persistent music toggle -->
+    <button id="musicToggle" class="fab fab-music" type="button" aria-label="Play music" aria-pressed="false">
+      <svg class="icon i-note" aria-hidden="true"><use href="#i-note"/></svg>
+      <svg class="icon i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+    </button>
+
+    <!-- Back to top -->
+    <button id="backToTop" class="fab fab-top" type="button" aria-label="Back to the top">
+      <svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>
+    </button>
+  </div>
+
+  <!-- ==========================================================
+       MODAL — OPEN WHEN LETTER
+       ========================================================== -->
+  <div id="letterModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="openTitle" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="open-card">
+      <button class="modal-close" type="button" data-close aria-label="Close letter"><svg class="icon"><use href="#i-close"/></svg></button>
+
+      <!-- little envelope that opens before the letter appears -->
+      <div id="openStage" class="open-stage" aria-hidden="true">
+        <div class="mini-env">
+          <span class="mini-back"></span>
+          <span class="mini-paper"></span>
+          <span class="mini-front"></span>
+          <span class="mini-flap"></span>
+          <span class="mini-seal"><svg class="icon"><use href="#i-heart"/></svg></span>
+        </div>
+      </div>
+
+      <article id="openLetter" class="open-letter" hidden>
+        <svg id="openIcon" class="icon open-icon" aria-hidden="true"><use href="#i-heart"/></svg>
+        <h3 id="openTitle" class="open-title"></h3>
+        <div id="openBody" class="open-body"></div>
+        <p id="openSign" class="open-sign"></p>
+        <button class="btn btn-primary" type="button" data-close>Close the letter ♡</button>
+      </article>
+    </div>
+  </div>
+
+  <!-- Small message bubble used for secrets and gentle notices -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <p style="position:fixed;inset:auto 0 0 0;z-index:999;background:#fffbf5;color:#4a2f2a;text-align:center;padding:12px;font-family:sans-serif">
+      This little surprise needs JavaScript to open. Please turn it on and refresh ♡
+    </p>
+  </noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>
