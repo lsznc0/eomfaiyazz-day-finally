@@ -67,12 +67,12 @@ const COMPLIMENTS = [
    Edit the sentences, add or remove lines. Keep the commas. */
 const REASONS = [
   'Your presence.',
-  'Your laugh, especially when you try (and fail) to stop it.',
+  'Your laugh.',
   'How you remember the tiny details I only mention once.',
   'The patience you have with me on my worst days.',
   'The way you get excited over things you genuinely love.',
   'How you make distance feel like a technicality.',
-  'The way you light up when you talk about things you love.',
+  'The way u feel giddy when you talk about things you love.',
   'How you make me feel appreciated without making a big deal out of it.',
   'Your sense of humor, and your very questionable puns.',
   'How you hype me up before anything important.',
@@ -163,8 +163,8 @@ const OPEN_WHEN = [
       or leave it as '' to use the default pink album cover.
    If a file can't be found, the player tells you which path is missing. */
 const PLAYLIST = [
-  { title: 'Tattooed Heart', artist: 'Ariana Grande',        src: 'audio/Tattooed Heart.mp3', cover: 'images/Ariana Grande – Yours Truly.jpg', note: 'Because what I feel for you isn’t temporary—you’re permanently in my heart, no matter what ♡' },
   { title: 'Sweet',          artist: 'Cigarettes After Sex',  src: 'audio/Sweet.mp3', cover: 'images/Opera House.jpg', note: 'For our quiet, late-night moments when just talking to you makes everything feel calm and safe.' },
+  { title: 'Tattooed Heart', artist: 'Ariana Grande',        src: 'audio/Tattooed Heart.mp3', cover: 'images/Ariana Grande – Yours Truly.jpg', note: 'Because what I feel for you isn’t temporary—you’re permanently in my heart, no matter what ♡' },
   { title: 'Stick With You', artist: 'TOMORROW X TOGETHER',   src: 'audio/Stick With You.mp3', cover: 'images/844495367672293260.jpg', note: 'A little reminder that on your good days and your heavy ones, I’m always staying right by your side.' },
   { title: 'Far Away',       artist: 'NCT WISH',              src: 'audio/FAR AWAY.mp3', cover: 'images/WISHFUL.jpg', note: 'Even when there’s distance between us, you’re always the closest person to my heart.' },
 ];
@@ -175,22 +175,21 @@ const FINAL_MESSAGE = {
   paragraphs: [
     'I hope every wish you just made comes true.',
     'And I hope you know that you’re already someone’s biggest wish come true. You’re mine.',
-    'Thank you for being exactly who you are, for every call, every message, every laugh that breaks the silence. I’m so proud of you. I love you, today and every day after.',
+    'Thank you for being exactly who you are, for every moment, every message, every laugh that breaks the silence. I’m so proud of you. I love you, today and every day after. :>',
   ],
   signOff: 'Always yours,',            // your name is added after this
 };
 
 /* ---------- Secret messages (hidden hearts, stars and stickers) ---------- */
 const SECRETS = {
-  star:    'You found a secret star! You shine brighter than every one of them.',
-  flower:  'A hidden flower! I’d pick you out of any garden.',
-  heart:   'A secret heart! This one is for the way you love people so gently.',
-  bow:     'A hidden bow! You’re the prettiest little detail in my whole life.',
-  sparkle: 'A secret sparkle! Fun fact: I smile every time your name pops up on my screen.',
+  star:    'You found a secret star! Galing maghanap ahhhhh parang ganun lng nung nahanap mo ‘ko..',
+  flower:  'A hidden flower! I’d choose you and pick you out of any garden btw :>',
+  heart:   'Nahanap mo yung heart. Isauli mo na kaya yung akin ? :) matagal mo nang tinangay eh.',
+  bow:     'May nahanap kang ribbon. Wala na, panalo ka na naman sa pa-cute.',
+  sparkle: 'Hidden sparkle! Kahit simple lng ‘tong ginawa ko, sana nmn napangiti po kita ngayon :)',
 };
 const ALL_SECRETS_MESSAGE =
-  'You found all five secrets! Screenshot this and send it to me for a prize: a voice note of me saying whatever you want.';
-
+  'at dahil 5/5 ka s quiz panalo ka ng washing machine with dryer! emeeee HAHAHAJAHJAHJAHJAAHAJAUAKA, unli kiss nlng sa pisnge and sa lips HEHHEEHEHH ss mo ‘to at isend saken para ma-claim bago mag expire'
 
 /* ================================================================
    ================================================================
@@ -494,7 +493,7 @@ const intro = (() => {
   }
 
   function init() {
-    welcomeText.textContent = 'Welcome, ' + CONFIG.herName + ' ♡ ' + CONFIG.introWelcome;
+    welcomeText.textContent = 'hiiiiiii, ' + ' baby !' + ' ♡ ' + CONFIG.introWelcome;
     spawnFloaters($('#introFloaters'), window.innerWidth < 600 ? 9 : 14);
     envelope.addEventListener('click', () => openEnvelope());
     button.addEventListener('click', () => {
